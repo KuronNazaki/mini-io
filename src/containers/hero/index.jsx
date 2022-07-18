@@ -1,16 +1,22 @@
 import AppleWatch from './../../assets/images/apple-watch.png'
+import Statistic from './../../assets/images/hero-statistic.png'
 
 const Hero = () => {
   return (
     <section>
       <div className="container mx-auto py-20 flex justify-between gap-10">
         <div className="content flex flex-col justify-center basis-1/2">
-          <h1 className="text-7xl font-black">Your website, reimagined</h1>
-          <div className="mt-5 text-xl">
-            Our landing page template works on all devices, so you only have to
-            set it up once, and get beautiful results forever.
+          <div className="mb-2 font-semibold text-slate-400 text-lg">
+            SmartWatch Exclusive
           </div>
-          <ul className="mt-10">
+          <h1 className="text-7xl font-black">
+            Let go of the challenge See yourself better
+          </h1>
+          <div className="mt-10 text-xl">
+            Real-time display of data such as exercise duration, mileage, heart
+            rate, etc
+          </div>
+          <ul className="mt-10 grid grid-cols-3 gap-4 text-slate-500">
             <li className="flex items-center">
               <svg
                 className="fill-teal-500 w-3 inline-block mr-4"
@@ -19,7 +25,7 @@ const Hero = () => {
               >
                 <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
               </svg>
-              <span>Lorem ipsum is placeholder text commonly.</span>
+              <span>Anti fingerprints</span>
             </li>
             <li className="flex items-center">
               <svg
@@ -29,7 +35,7 @@ const Hero = () => {
               >
                 <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
               </svg>
-              <span>Excepteur sint occaecat cupidatat.</span>
+              <span>Dust prevention</span>
             </li>
             <li className="flex items-center">
               <svg
@@ -39,16 +45,55 @@ const Hero = () => {
               >
                 <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
               </svg>
-              <span>Lorem ipsum is placeholder text commonly.</span>
+              <span>Delicate touch</span>
+            </li>
+            <li className="flex items-center">
+              <svg
+                className="fill-teal-500 w-3 inline-block mr-4"
+                viewBox="0 0 12 12"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+              </svg>
+              <span>3D anti-chip</span>
+            </li>
+            <li className="flex items-center">
+              <svg
+                className="fill-teal-500 w-3 inline-block mr-4"
+                viewBox="0 0 12 12"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+              </svg>
+              <span>Hardness screen</span>
+            </li>
+            <li className="flex items-center">
+              <svg
+                className="fill-teal-500 w-3 inline-block mr-4"
+                viewBox="0 0 12 12"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+              </svg>
+              <span>Impact resistant</span>
             </li>
           </ul>
         </div>
-        <div className="relative basis-1/2 overflow-hidden rounded-xl animate-vertically-moving">
-          <img
-            src={AppleWatch}
-            alt="Phone Mockup"
-            className="h-full object-cover lg:w-full"
-          />
+        <div className="relative basis-1/2">
+          <div className="animate-vertically-moving">
+            <img
+              src={AppleWatch}
+              alt="Apple Watch Mockup"
+              className="h-full object-cover lg:w-full"
+            />
+          </div>
+          <div className="absolute w-[50%] rounded-xl overflow-hidden shadow-2xl bottom-20 -right-10 animate-vertically-moving-reversed">
+            <img
+              src={Statistic}
+              alt="Statistic Mockup"
+              className="h-full object-cover lg:w-full"
+            />
+          </div>
         </div>
       </div>
     </section>
