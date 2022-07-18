@@ -15,9 +15,19 @@ module.exports = {
             transform: 'translateY(0px)',
           },
         },
+        'vertically-moving-reversed': {
+          '0%': {
+            transform: 'translateY(40px)',
+          },
+          '100%': {
+            transform: 'translate(0)',
+          },
+        },
       },
       animation: {
         'vertically-moving': 'vertically-moving 2s linear infinite alternate',
+        'vertically-moving-reversed':
+          'vertically-moving-reversed 2s linear infinite alternate',
       },
     },
   },
