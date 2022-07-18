@@ -4,8 +4,8 @@ import Statistic from './../../assets/images/hero-statistic.png'
 const Hero = () => {
   return (
     <section>
-      <div className="container mx-auto py-20 flex justify-between gap-10">
-        <div className="content flex flex-col justify-center basis-1/2">
+      <div className="container mx-auto py-10 flex justify-between gap-10 flex-col lg:flex-row">
+        <div className="content flex flex-col justify-center md:basis-4/6 basis-1/2">
           <div className="mb-2 font-semibold text-slate-400 text-lg">
             SmartWatch Exclusive
           </div>
@@ -16,7 +16,7 @@ const Hero = () => {
             Real-time display of data such as exercise duration, mileage, heart
             rate, etc
           </div>
-          <ul className="mt-10 grid grid-cols-3 gap-4 text-slate-500">
+          <ul className="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-4 text-slate-500">
             <li className="flex items-center">
               <svg
                 className="fill-teal-500 w-3 inline-block mr-4"
@@ -79,7 +79,7 @@ const Hero = () => {
             </li>
           </ul>
         </div>
-        <div className="relative basis-1/2">
+        <div className="relative basis-1/4 md:basis-1/3 lg:basis-1/2">
           <div className="animate-vertically-moving">
             <img
               src={AppleWatch}
