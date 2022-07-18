@@ -24,7 +24,7 @@ const NavBar = () => {
 
   return (
     <div className="container mx-auto mt-5">
-      <img className="fixed -z-10" src={Gradient1} alt="Gradient 1" />
+      <img className="absolute top-0 left-0 -z-10" src={Gradient1} alt="Gradient 1" />
       <nav className="border-gray-200 py-2.5 rounded dark:bg-gray-900">
         <div className="flex flex-wrap justify-between items-center">
           <a href="#" className="flex items-center gap-x-4">
