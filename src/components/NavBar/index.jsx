@@ -6,7 +6,7 @@ import NavLink from './NavLink'
 const PAGES = {
   home: 'home',
   about: 'about',
-  services: 'services',
+  service: 'service',
   contact: 'contact',
 }
 
@@ -25,8 +25,8 @@ const NavBar = () => {
   return (
     <div className="container mx-auto mt-5">
       <img className="fixed -z-10" src={Gradient1} alt="Gradient 1" />
-      <nav className="border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
-        <div className="container flex flex-wrap justify-between items-center mx-auto">
+      <nav className="border-gray-200 py-2.5 rounded dark:bg-gray-900">
+        <div className="flex flex-wrap justify-between items-center">
           <a href="#" className="flex items-center gap-x-4">
             <div>
               <svg
@@ -125,16 +125,44 @@ const NavBar = () => {
           >
             <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
               <li>
-                <NavLink name="home" path="#" onChoose={onChangePage} active={currentPage === PAGES['home'] ? true : false}>Home</NavLink>
+                <NavLink
+                  name="home"
+                  path="/home"
+                  onChoose={onChangePage}
+                  active={currentPage === PAGES['home'] ? true : false}
+                >
+                  Home
+                </NavLink>
               </li>
               <li>
-                <NavLink name="about" path="#" onChoose={onChangePage} active={currentPage === PAGES['about'] ? true : false}>About</NavLink>
+                <NavLink
+                  name="about"
+                  path="/about"
+                  onChoose={onChangePage}
+                  active={currentPage === PAGES['about'] ? true : false}
+                >
+                  About
+                </NavLink>
               </li>
               <li>
-                <NavLink name="services" path="#" onChoose={onChangePage} active={currentPage === PAGES['services'] ? true : false}>Services</NavLink>
+                <NavLink
+                  name="service"
+                  path="/service"
+                  onChoose={onChangePage}
+                  active={currentPage === PAGES['service'] ? true : false}
+                >
+                  Service
+                </NavLink>
               </li>
               <li>
-                <NavLink name="contact" path="#" onChoose={onChangePage} active={currentPage === PAGES['contact'] ? true : false}>Contact</NavLink>
+                <NavLink
+                  name="contact"
+                  path="/contact"
+                  onChoose={onChangePage}
+                  active={currentPage === PAGES['contact'] ? true : false}
+                >
+                  Contact
+                </NavLink>
               </li>
             </ul>
           </div>

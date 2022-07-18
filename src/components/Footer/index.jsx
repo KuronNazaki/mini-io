@@ -279,7 +279,7 @@ const Footer = () => {
           </div>
         </div>
         <img
-          className="w-full h-full absolute bottom-0 left-0 rotate-180"
+          className="w-full h-full absolute bottom-0 left-0 rotate-180 -z-50"
           src={Gradient2}
           alt="Gradient 2"
         />

@@ -1,13 +1,7 @@
-import Footer from '../../components/Footer'
-import Header from '../../components/Header'
+import Hero from '../hero'
 
 const Home = () => {
-  return (
-    <div>
-      <Header />
-      <Footer />
-    </div>
-  )
+  return <Hero />
 }
 
 export default Home

@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 const STATUS_STYLES = {
   true: 'text-lg block py-2 pr-4 pl-3 text-white bg-teal-500 rounded md:bg-transparent md:text-teal-500 md:p-0 dark:text-white',
@@ -8,13 +9,13 @@ const STATUS_STYLES = {
 
 const NavLink = ({ name, path, children, onChoose, active }) => {
   return (
-    <a
-      href={path}
+    <Link
+      to={path}
       className={STATUS_STYLES[active.toString()]}
       onClick={() => onChoose(name)}
     >
       {children}
-    </a>
+    </Link>
   )
 }
 
