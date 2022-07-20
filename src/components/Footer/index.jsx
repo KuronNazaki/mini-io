@@ -1,4 +1,4 @@
-import Gradient2 from './../../assets/images/gradient-2.png'
+import NavLink from '../NavBar/NavLink'
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
 const Footer = () => {
@@ -60,7 +60,42 @@ const Footer = () => {
             </a>
           </div>
 
-          <div className="w-[80%] md:w-[60%] grid grid-cols-2 gap-6 md:flex md:gap-8 justify-between">
+          <div className="w-[80%] md:w-[60%] grid grid-cols-2 gap-6 xl:flex md:gap-8 justify-between">
+            <div>
+              <h2 className="mb-6 text-lg font-bold text-gray-900 uppercase dark:text-white">
+                Navigation
+              </h2>
+              <ul className="text-gray-600 dark:text-gray-400 flex flex-col gap-y-4">
+                <li>
+                  <NavLink
+                    name="home"
+                    path={'/home'}
+                    className="hover:underline"
+                  >
+                    Home
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    name="product"
+                    path={'/product'}
+                    className="hover:underline"
+                  >
+                    Product
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    name="contact"
+                    path={'/contact'}
+                    className="hover:underline"
+                  >
+                    Contact
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
+
             <div>
               <h2 className="mb-6 text-lg font-bold text-gray-900 uppercase dark:text-white">
                 PRODUCTS
@@ -145,34 +180,6 @@ const Footer = () => {
                 <li>
                   <a href="#" className="hover:underline">
                     Online communities
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h2 className="mb-6 text-lg font-bold text-gray-900 uppercase dark:text-white">
-                Support
-              </h2>
-              <ul className="text-gray-600 dark:text-gray-400 flex flex-col gap-y-4">
-                <li>
-                  <a href="#" className="hover:underline">
-                    Documentation
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:underline">
-                    Tutorials & guides
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:underline">
-                    Webinars
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:underline">
-                    Open-source
                   </a>
                 </li>
               </ul>

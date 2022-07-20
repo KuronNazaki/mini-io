@@ -130,7 +130,7 @@ const NavBar = () => {
                   Home
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <NavLink
                   name="about"
                   path="/about"
@@ -138,7 +138,7 @@ const NavBar = () => {
                 >
                   About
                 </NavLink>
-              </li>
+              </li> */}
               <li>
                 <NavLink
                   name="product"
