@@ -1,4 +1,3 @@
-import { current } from '@reduxjs/toolkit'
 import { useEffect, useRef, useState } from 'react'
 import { GlowParticle } from './GlowParticles'
 
@@ -12,6 +11,8 @@ const COLORS = [
   { r: 45, g: 212, b: 191 },
   { r: 56, g: 189, b: 248 },
   { r: 79, g: 70, b: 229 },
+  { r: 109, g: 40, b: 217 },
+  { r: 225, g: 29, b: 72 },
 ]
 
 class GradientBackground {
@@ -22,7 +23,7 @@ class GradientBackground {
     this.ctx = this.canvas.getContext('2d')
 
     this.pixelRatio = window.devicePixelRatio > 1 ? 2 : 1
-    this.totalParticles = 10
+    this.totalParticles = 20
     this.particles = []
     this.maxRadius = 900
     this.minRadius = 400
