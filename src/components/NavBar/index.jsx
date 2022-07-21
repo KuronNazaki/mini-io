@@ -1,30 +1,25 @@
 import { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import Button from '../Button'
 import Gradient1 from './../../assets/images/gradient-1.png'
 import NavLink from './NavLink'
 
-const PAGES = {
-  home: 'home',
-  about: 'about',
-  service: 'service',
-  contact: 'contact',
-}
-
 /* eslint-disable jsx-a11y/anchor-is-valid */
 const NavBar = () => {
+  const { pathname } = useLocation()
+
   const [isExpanded, setIsExpanded] = useState(false)
   const onToggleExpansion = () => {
     setIsExpanded((prev) => !prev)
   }
 
-  const [currentPage, setCurrentPage] = useState('home')
-  const onChangePage = (name) => {
-    setCurrentPage(name)
-  }
-
   return (
-    <div className="container mx-auto mt-5">
-      <img className="fixed -z-10" src={Gradient1} alt="Gradient 1" />
+    <div className="container mx-auto pt-5">
+      {/* <img
+        className="absolute top-0 left-0 -z-10"
+        src={Gradient1}
+        alt="Gradient 1"
+      /> */}
       <nav className="border-gray-200 py-2.5 rounded dark:bg-gray-900">
         <div className="flex flex-wrap justify-between items-center">
           <a href="#" className="flex items-center gap-x-4">
@@ -79,14 +74,16 @@ const NavBar = () => {
             </span>
           </a>
           <div className="flex md:order-2">
-            <button
-              type="button"
-              data-mdb-ripple="true"
-              data-mdb-ripple-color="light"
-              className="text-white bg-teal-500 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800"
-            >
-              Get started
-            </button>
+            <Link to="/contact">
+              <button
+                type="button"
+                data-mdb-ripple="true"
+                data-mdb-ripple-color="light"
+                className="text-white bg-teal-500 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800"
+              >
+                Let's talk
+              </button>
+            </Link>
             <Button variant="borderless" onClick={onToggleExpansion}>
               <span className="sr-only">Open main menu</span>
               <svg
@@ -128,38 +125,38 @@ const NavBar = () => {
                 <NavLink
                   name="home"
                   path="/home"
-                  onChoose={onChangePage}
-                  active={currentPage === PAGES['home'] ? true : false}
+                  active={pathname === '/home' ? true : false}
                 >
                   Home
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <NavLink
                   name="about"
                   path="/about"
-                  onChoose={onChangePage}
-                  active={currentPage === PAGES['about'] ? true : false}
+                  active={pathname === '/about' ? true : false}
                 >
                   About
                 </NavLink>
-              </li>
+              </li> */}
               <li>
                 <NavLink
-                  name="service"
-                  path="/service"
-                  onChoose={onChangePage}
-                  active={currentPage === PAGES['service'] ? true : false}
+                  name="product"
+                  path="/product"
+                  active={
+                    pathname === '/product' || pathname.includes('/product')
+                      ? true
+                      : false
+                  }
                 >
-                  Service
+                  Product
                 </NavLink>
               </li>
               <li>
                 <NavLink
                   name="contact"
                   path="/contact"
-                  onChoose={onChangePage}
-                  active={currentPage === PAGES['contact'] ? true : false}
+                  active={pathname === '/contact' ? true : false}
                 >
                   Contact
                 </NavLink>
